@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
+    <%#= f.datetime_select :date %>
+    <%= datetime_select("activity", "date", default: 0.days.from_now) %>
   </div>
   <div class="field">
     <%= f.label :originator %><br>

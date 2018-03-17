@@ -11,31 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180314150509) do
+ActiveRecord::Schema.define(version: 20180317135539) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title"
     t.string   "content"
+    t.string   "originator"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.datetime "date"
-    t.string   "originator"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "games", force: :cascade do |t|
-    t.string   "title"
-    t.string   "content"
-    t.time     "date"
-    t.string   "originator"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "leaves", force: :cascade do |t|
-    t.string   "name"
-    t.string   "reason"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "reasons", force: :cascade do |t|

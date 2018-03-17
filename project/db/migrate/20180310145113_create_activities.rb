@@ -3,7 +3,6 @@ class CreateActivities < ActiveRecord::Migration
     create_table :activities do |t|
       t.string :title
       t.string :content
-      t.datetime :date
       t.string :originator
 
       t.timestamps null: false

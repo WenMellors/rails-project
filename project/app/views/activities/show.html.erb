@@ -22,7 +22,8 @@
 <% if current_user.admin? %>
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <% end %>
-<% if current_user.menber? and (@time - @activity.date.ago(1.day) < 0) %>
+<%# if current_user.menber? and (@time - @activity.date.ago(1.day) < 0) %>
+<% if (@time - @activity.date.ago(1.day) < 0) %>
 <h2> Ask for leave ? </h2>
 <%= form_for([@activity, @activity.reasons.build]) do |f| %>
   <p>

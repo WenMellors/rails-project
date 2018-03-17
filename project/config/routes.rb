@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :activities do
     resources :reasons
   end
-  resources :reasons
+  #resources :reasons
+  get "/reasons" => "reasons#index"
   devise_for :users
 
   root to: "activities#index"

@@ -18,9 +18,9 @@
         <td><%= reason.name %></td>
         <td><%= reason.why %></td>
         <td><%= reason.activity.title %></td>
-        <td><%= link_to 'Show', reason %></td>
-        <td><%= link_to 'Edit', edit_reason_path(reason) %></td>
-        <td><%= link_to 'Destroy', reason, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', activity_reason_path(reason.activity,reason) %></td>
+        <td><%= link_to 'Edit', edit_activity_reason_path(reason.activity,reason) %></td>
+        <td><%= link_to 'Destroy', activity_reason_path(reason.activity,reason), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

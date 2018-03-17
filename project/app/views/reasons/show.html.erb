@@ -12,8 +12,8 @@
 
 <p>
   <strong>Activity:</strong>
-  <%= @reason.activity %>
+  <%= @reason.activity.title %>
 </p>
 
-<%= link_to 'Edit', edit_reason_path(@reason) %> |
+<%= link_to 'Edit(有Bug)', edit_activity_reason_path(@reason.activity,@reason) %> |
 <%= link_to 'Back', reasons_path %>
