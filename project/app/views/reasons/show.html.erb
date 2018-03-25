@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>姓名:</strong>
   <%= @reason.name %>
 </p>
 
 <p>
-  <strong>Why:</strong>
+  <strong>请假原因:</strong>
   <%= @reason.why %>
 </p>
 
 <p>
-  <strong>Activity:</strong>
+  <strong>活动名称:</strong>
   <%= @reason.activity.title %>
 </p>
 
-<%= link_to 'Edit(有Bug)', edit_activity_reason_path(@reason.activity,@reason) %> |
-<%= link_to 'Back', reasons_path %>
+<%= link_to '编辑(有Bug)', edit_activity_reason_path(@reason.activity,@reason) %> |
+<%= link_to '返回', reasons_path %>

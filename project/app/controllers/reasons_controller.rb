@@ -34,7 +34,7 @@ class ReasonsController < ApplicationController
   def update
     respond_to do |format|
       if @reason.update(reason_params)
-        format.html { redirect_to @reason, notice: 'Reason was successfully updated.' }
+        format.html { redirect_to @reason, notice: '请假原因已被成功修改。' }
         format.json { render :show, status: :ok, location: @reason }
       else
         format.html { render :edit }
@@ -48,7 +48,7 @@ class ReasonsController < ApplicationController
   def destroy
     @reason.destroy
     respond_to do |format|
-      format.html { redirect_to reasons_url, notice: 'Reason was successfully destroyed.' }
+      format.html { redirect_to reasons_url, notice: '请假原因已被成功删除。' }
       format.json { head :no_content }
     end
   end

@@ -1,7 +1,7 @@
 <%= form_for(@activity) do |f| %>
   <% if @activity.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+      <h2><%= pluralize(@activity.errors.count, "个") %> 错误出现了:</h2>
 
       <ul>
       <% @activity.errors.full_messages.each do |message| %>
@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :活动标题 %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
+    <%= f.label :活动内容 %><br>
     <%= f.text_field :content %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
+    <%= f.label :活动时间 %><br>
     <%#= f.datetime_select :date %>
     <%= datetime_select("activity", "date", default: 0.days.from_now) %>
   </div>
   <div class="field">
-    <%= f.label :originator %><br>
+    <%= f.label :发起人 %><br>
     <%= f.text_field :originator %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '提交活动'%>
   </div>
 <% end %>
