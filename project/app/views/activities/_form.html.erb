@@ -10,25 +10,31 @@
       </ul>
     </div>
   <% end %>
+  <div class="ui form">
+    <div class="twelve wide field" style="position:relative;left:12%">
+      <%= f.label :活动标题 %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="twelve wide field" style="position:relative;left:12%">
+      <%= f.label :活动内容 %>
+      <%= f.text_area :content, size: "10x2" %>
+    </div>
+  </div>
+  <br>
+    <div class="field" style="font-weight:700">
+      <%= f.label :活动时间 %><br>
+      <%#= f.datetime_select :date %>
+      <%= datetime_select("activity", "date", default: 0.days.from_now) %>
+    </div>
+    <br>
+    <div class="ui form">
+      <div class="twelve wide field" style="position:relative;left:12%">
+        <%= f.label :发起人 %>
+        <%= f.text_field :originator %>
+      </div>
+      <div class="actions">
+        <%= f.submit '提交活动'%>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :活动标题 %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :活动内容 %><br>
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :活动时间 %><br>
-    <%#= f.datetime_select :date %>
-    <%= datetime_select("activity", "date", default: 0.days.from_now) %>
-  </div>
-  <div class="field">
-    <%= f.label :发起人 %><br>
-    <%= f.text_field :originator %>
-  </div>
-  <div class="actions">
-    <%= f.submit '提交活动'%>
-  </div>
 <% end %>
