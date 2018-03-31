@@ -8,10 +8,10 @@
       </p>
     </div>
     <div class="sixteen wide column">
-      <p>
-        <strong>活动内容:</strong>
-        <%= @activity.content %>
-      </p>
+        <p>
+          <strong>活动内容:</strong>
+          <%= @activity.content.gsub(/\n/,'</br>').html_safe %>
+        </p>
     </div>
       <div class="ten wide column">
         <p>

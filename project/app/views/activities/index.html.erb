@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-
 <div class="list">
   <div class="ui center aligned container">
     <table class="ui inverted teal table">
       <thead>
         <tr>
           <th>活动标题</th>
-          <th>活动内容</th>
+          <th id = "hide_content">活动内容</th>
           <th>活动日期</th>
           <th>发起人</th>
           <th>活动请假</th>
@@ -22,7 +21,7 @@
         <% @activities.each do |activity| %>
         <tr>
           <td><%= activity.title %></td>
-          <td><%= activity.content %></td>
+          <td style="color: red" id = "hide_content"><%= activity.content.gsub(/\n/,'</br>').html_safe %></td>
           <td><%= activity.date.strftime('%Y-%m-%d %H:%M') %></td>
           <td><%= activity.originator %></td>
           <td><%= link_to '活动请假', activity %></td>
@@ -37,9 +36,10 @@
   </div>
 </div>
 
-<div class="bottom">
-  <% if current_user.admin? %>
-  <%= link_to '新建活动', new_activity_path %>
-  <%= link_to '查看请假原因', reasons_path%>
-  <% end %>
+<div class="bottom" style = "position: relative; top: 180px; left: 100px">
+    <% if current_user.admin? %>
+    <%= link_to '新建活动', new_activity_path %> |
+    <%= link_to '查看请假原因', reasons_path%>
+    <% end %>
 </div>
+<button id = "content" style = "background-color: #357ebd; color: white; border-radius: 10px;border: 1px solid transparent; position: relative; top: 146px; left: 900px">query conent</button>

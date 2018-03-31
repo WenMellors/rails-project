@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $("button#content").click(function(){
+    $("th#hide_content,td#hide_content").each(function(){
+      $(this).fadeToggle();
+    });
+  })
+})
+
+window.onload = function(){
+  $("th#hide_content,td#hide_content").each(function(){
+    $(this).hide()
+  })
+}
