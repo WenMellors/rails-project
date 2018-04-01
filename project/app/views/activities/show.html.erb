@@ -7,12 +7,16 @@
         <%= @activity.title %>
       </p>
     </div>
+  </hr>
     <div class="sixteen wide column">
         <p>
           <strong>活动内容:</strong>
-          <%= @activity.content.gsub(/\n/,'</br>').html_safe %>
+          <p style="border: solid 2px transparent;position: relative; margin-top: -5%">
+            <%= @activity.content.gsub(/\n/,'</br>').html_safe %>
+          </p>
         </p>
     </div>
+  </hr>
       <div class="ten wide column">
         <p>
           <strong>活动时间:</strong>
@@ -30,14 +34,14 @@
     <% if (@time - @activity.date.ago(1.day) < 0) %>
     <h2> 想要请假吗? </h2>
     <%= form_for([@activity, @activity.reasons.build]) do |f| %>
-    <div class="ui form">
-      <div class="twelve wide field" style="position:relative;left:12%">
+    <div class="ui form" >
+      <div class="twelve wide field" style="position:relative;">
         <%= f.label :姓名 %>
         <%= f.text_field :name %>
       </div>
-    <div class="twelve wide field" style="position:relative;left:12%">
+    <div class="twelve wide field" style="position:relative;">
       <%= f.label :请假原因 %>
-      <%= f.text_area :why, size: "10x2" %>
+      <%= f.text_area :why, size: "10x5" %>
     </div>
     </div>
     <br>
