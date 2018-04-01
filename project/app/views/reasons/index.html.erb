@@ -16,13 +16,11 @@
       <% @reasons.each do |reason| %>
       
       <tr>
-	<% if reason.activity %>
         <td><%= reason.name %></td>
         <td><%= reason.why %></td>
         <td><%= reason.activity.title %></td>
         <td><%= link_to '详情', activity_reason_path(reason.activity,reason) %></td>
         <td><%= link_to '删除', activity_reason_path(reason.activity,reason), method: :delete, data: { confirm: '确定要删除此条请假吗?' } %></td>
-	<% end %>
       </tr>
       
 <% end %>
