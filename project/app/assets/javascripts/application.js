@@ -28,3 +28,9 @@ window.onload = function(){
     $(this).hide()
   })
 }
+$(document).on("turbolinks:load", function(){
+	var us = $("#user").val();
+	var lo = $("#log").val();
+	if(us)alert(us);
+	else if(lo)alert(lo);
+})
