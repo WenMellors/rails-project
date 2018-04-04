@@ -1,4 +1,4 @@
-<div class="main">
+<div class="list">
   <div class="grid" style="font-size:17px">
     <div class="sixteen wide column">
       <p>
@@ -10,7 +10,7 @@
     <div class="sixteen wide column">
         <p>
           <strong>活动内容:</strong>
-          <p style="border: solid 2px transparent;position: relative; margin-top: -5%">
+          <p style="border: solid 2px transparent;position: relative; margin-top: -5%;word-wrap:break-word">
             <%= @activity.content.gsub(/\n/,'</br>').html_safe %>
           </p>
         </p>
@@ -44,9 +44,9 @@
     </div>
     </div>
     <br>
-    <p>
-      <%= f.submit '提出请假'%>
-    </p>
+    <button class="ui teal button" type="submit" style="font-size:14px;position:relative; left: 60%">
+      请假
+    </button>
     <% end %>
 
     <% end %>

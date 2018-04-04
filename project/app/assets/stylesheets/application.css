@@ -18,16 +18,27 @@
   -moz-background-size:100% 100%;
   background-size:100% 100%;
  }
-div.main, div.list{
-  text-align: left;
+div.main{
+   text-align: left;
    border-radius: 20px;
    height: 350px;
    position: absolute;
    left: 45%;
-   top: 30%;
+   top: 40%;
    transform: translate(-50%,-50%);
+   width: 80%;
 }
 div.bottom{
   position: absolute;
   bottom: 2%;
+}
+div.list{
+  text-align: left;
+  border-radius: 20px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%,-50%);
+  width: 80%;
 }
